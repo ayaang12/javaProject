@@ -2,7 +2,7 @@ plugins {
 	java
 	id("org.springframework.boot") version "4.0.0"
 	id("io.spring.dependency-management") version "1.1.7"
-}
+}dl
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
@@ -28,4 +28,8 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+tasks.named('bootRun') {
+    mainClass = 'com.example.movieRecommender.MovieRecommenderApplication'
 }
